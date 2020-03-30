@@ -22,6 +22,7 @@ public function __construct($stamina, $dexerity, $race, $sex)
     $this->dexerity = $dexerity;
     $this->race = $race;
     $this->sex = $sex;
+    
     $this->name = $this->name();
     $this->surname =$this->surname();
 
