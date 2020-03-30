@@ -22,7 +22,7 @@ public function __construct($stamina, $dexerity, $race, $sex)
     $this->dexerity = $dexerity;
     $this->race = $race;
     $this->sex = $sex;
-    
+
     $this->name = $this->name();
     $this->surname =$this->surname();
 
@@ -57,5 +57,6 @@ class Rasa extends Hra
 {
     public $race;
 }
-$hra = new Hra(150, 200, "Hobit", "Female")
+$hra = new Hra(150, 200, "Hobit", "female")
 bd($hra);
+?>
