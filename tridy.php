@@ -5,14 +5,14 @@ public $stamina;
 public $strenght;
 public $wisdom;
 public $inteligence;
-public $charisma;
+
 public $dexerity;
 public $race;
 public $sex;
 public $name;
 public $surname;
 
-public function __construct($stamina, $stranght, $wisdom, $inteligence, $charisma, $dexerity, $race, $sex, $name, $surname)
+public function __construct($stamina, $dexerity, $race, $sex)
 {
     $this->stamina = $stamina;
     $this->strenght = $strenght;
@@ -22,15 +22,39 @@ public function __construct($stamina, $stranght, $wisdom, $inteligence, $charism
     $this->dexerity = $dexerity;
     $this->race = $race;
     $this->sex = $sex;
-    $this->name = $name;
-    $this->surname = $surname;
+    $this->name = $this->name();
+    $this->surname =$this->surname();
 
 }
 
-}
-
-class Hra extends Rasa
+public function name()
 {
+$female = array("Andrya", "Bréa", "Calia", "Cora", "Euphemia", "Jiliana", "Kitria", "Lavinia", "Lida", "Merla", "Neda", "Paela", "Portia", "Seraphina", "Šaena", "Tryma", "Vania", "Verna");
+$male = array("Alton", "Ander", "Cade", "Corin", "Eldon", "Erich", "Finan", "Garet", "Lindal", "Lyle", "Merik", "Milo", "Osborn", "Perin", "Rýd", "Rosko", "Velbi");
+ 
+if($this->sex = "male") {
+    $random_name = array_rand($male);
+    return $male[$random_name];
+}else if( $this->sex = "female"){
+    $random_name = array_rand($female);
+    return $female[$random_name];
+}
+
+}
+
+
+public function surname()
+{
+    $prijmeni = array("Bodlákotrn", "Bral", "Čajolístek", "Dobrosud", "Hoďvaloun", "Horal", "Kartáčobral", "Podvětev", "Pytlík", "Svalilskopce", "Šibeničář", "Zelenoflaška");
+    $random_surname = array_rand($prijmeni);
+    return $prijmeni[$random_surname];
+}
 
 
 }
+class Rasa extends Hra
+{
+    public $race;
+}
+$hra = new Hra(150, 200, "Hobit", "Female")
+bd($hra);
