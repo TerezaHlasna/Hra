@@ -12,13 +12,13 @@ public $sex;
 public $name;
 public $surname;
 
-public function __construct($stamina, $dexerity, $race, $sex)
+public function __construct($stamina, $charisma,$strenght,$wisdom,$inteligence, $dexerity, $race, $sex)
 {
     $this->stamina = $stamina;
     $this->strenght = $strenght;
     $this->wisdom = $wisdom;
     $this->inteligence = $inteligence;
-    $this->charisma = $carisma;
+    $this->charisma = $charisma;
     $this->dexerity = $dexerity;
     $this->race = $race;
     $this->sex = $sex;
@@ -32,7 +32,7 @@ public function name()
 {
 $female = array("Andrya", "Bréa", "Calia", "Cora", "Euphemia", "Jiliana", "Kitria", "Lavinia", "Lida", "Merla", "Neda", "Paela", "Portia", "Seraphina", "Šaena", "Tryma", "Vania", "Verna");
 $male = array("Alton", "Ander", "Cade", "Corin", "Eldon", "Erich", "Finan", "Garet", "Lindal", "Lyle", "Merik", "Milo", "Osborn", "Perin", "Rýd", "Rosko", "Velbi");
- 
+
 if($this->sex = "male") {
     $random_name = array_rand($male);
     return $male[$random_name];
@@ -57,6 +57,6 @@ class Rasa extends Hra
 {
     public $race;
 }
-$hra = new Hra(150, 200, "Hobit", "female")
-bd($hra);
+$behavior = new Hra(150,110, 200,100,300, 120, "Hobit", "female");
+
 ?>
