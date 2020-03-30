@@ -57,6 +57,6 @@ class Rasa extends Hra
 {
     public $race;
 }
-$behavior = new Hra(150,110, 200,100,300, 120, "Hobit", "female");
+$behavior = new Hra(150,110, 200,100,300, 120, "Hobit", "male");
 
 ?>
